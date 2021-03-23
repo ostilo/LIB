@@ -13,3 +13,14 @@ var Utilities=
       alert(input);
    }
 }
+
+(function(){
+
+  if ( !window.myNamespace ) {
+    window.myNamespace = {};
+  } 
+
+  myNamespace.function01 = function(){  consoloe.log("one") };
+  myNamespace.function02 = function(){ consoloe.log("two")  };
+
+})();
