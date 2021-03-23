@@ -6,3 +6,10 @@ function parentCell() {
 
 }
 
+var Utilities= 
+{
+   show: function(input)
+   {
+      alert(input);
+   }
+}
