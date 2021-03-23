@@ -43,24 +43,31 @@ var Utilities=
 
 
 (function(window){
-// You can enable the strict mode commenting the following line
-// 'use strict';
+  // You can enable the strict mode commenting the following line  
+  // 'use strict';
 
-// This function will contain all our code
-function myLibrary(){
-var _myLibraryObject = {};
+  // This function will contain all our code
+  function myLibrary(){
+    var _myLibraryObject = {};
+    
 
-// We will add functions to our library here !
+    // Just create a property to our library object.
+    _myLibraryObject.myCustomLog = function(thingToLog){
+        console.log("My-Custom-Log > Type of variable : " + typeof(thingToLog));
+        console.log("My-Custom-Log > Is number : " + !isNaN(thingToLog));
+        console.log("My-Custom-Log > Length : " + (thingToLog).length);
 
-return _myLibraryObject;
-}
+        return console.log(thingToLog);
+    };
 
-// We need that our library is globally accesible, then we save in the window
-if(typeof(window.myWindowGlobalLibraryName) === 'undefined'){
-window.myWindowGlobalLibraryName = myLibrary();
-}
+    return _myLibraryObject;
+  }
+
+  // We need that our library is globally accesible, then we save in the window
+  if(typeof(window.myWindowGlobalLibraryName) === 'undefined'){
+    window.myWindowGlobalLibraryName = myLibrary();
+  }
 })(window); // We send the window variable withing our function
 
 
-// Then we can call it using
 
