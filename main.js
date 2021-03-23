@@ -39,3 +39,28 @@ var Utilities=
     }
 
 })(window);
+
+
+
+(function(window){
+// You can enable the strict mode commenting the following line
+// 'use strict';
+
+// This function will contain all our code
+function myLibrary(){
+var _myLibraryObject = {};
+
+// We will add functions to our library here !
+
+return _myLibraryObject;
+}
+
+// We need that our library is globally accesible, then we save in the window
+if(typeof(window.myWindowGlobalLibraryName) === 'undefined'){
+window.myWindowGlobalLibraryName = myLibrary();
+}
+})(window); // We send the window variable withing our function
+
+
+// Then we can call it using
+
