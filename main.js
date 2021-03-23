@@ -24,3 +24,18 @@ var Utilities=
   myNamespace.function02 = function(){ consoloe.log("two")  };
 
 })();
+
+
+(function (window) {
+ function defineBayside(){
+         var Bayside =  {}; 
+     Bayside.alert = function () {
+     alert("Welcome")
+     };
+     return Bayside;
+ }
+    if(typeof(Bayside) === 'undefined'){
+    window.Bayside = defineBayside();
+    }
+
+})(window);
